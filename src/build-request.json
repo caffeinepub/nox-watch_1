@@ -1,0 +1,180 @@
+{
+  "kind": "build_request",
+  "title": "NOX_WATCH ultra-modern marketing website (Home, Catalog, About, Contact)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a site-wide layout for NOX_WATCH with a responsive top navigation (Home, Catalog, About, Contact), a consistent header/footer, and a clean white + blue visual system (typography, spacing, buttons, cards) suitable for a premium watch brand.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "I want a professional, ultra-modern website for a watch store. The store name is NOX_WATCH.",
+          "Design requirements:\n- Clean, modern, and attractive style\n- White and blue color scheme\n- Easy navigation and user-friendly layout"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation is visible on all pages and highlights the active route.",
+        "Design is predominantly white with blue accents (links, buttons, section highlights).",
+        "Layout is responsive across mobile/tablet/desktop with sensible spacing and readable typography.",
+        "Footer contains store name (NOX_WATCH) and essential quick links or store details."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a Home page that showcases featured watches and highlights top/premium collections with a modern hero section, featured grid, and collection highlights; keep all content easy to customize via a single front-end config/data file (e.g., arrays for featured products and collections).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Homepage showcasing featured watches and top collections",
+          "The website should feature the best watches and highlight premium collections.",
+          "Please generate the website structure so I can easily customize images, text, layout, and design myself."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page contains: (1) hero section, (2) featured watches section, (3) premium collections section.",
+        "Featured watches and collections render from a centralized, clearly labeled data/config module (no hardcoding scattered across components).",
+        "Each featured watch shows at least: image, name, short description, and price (or price placeholder) with a clear CTA (e.g., “View details” linking to Catalog or a product section)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a Product Catalog page that displays a grid/list of watch product cards including image, price, and description, with basic UX for browsing (responsive grid and optional simple client-side filtering/sorting that is easy to remove/customize).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Product catalog page with images, prices, and descriptions",
+          "Please generate the website structure so I can easily customize images, text, layout, and design myself."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Catalog page displays multiple products in a responsive grid with consistent card styling.",
+        "Each product card shows: image, product name, price, and short description.",
+        "Product list is driven by a centralized data/config module so the user can add/remove/edit products easily.",
+        "If filtering/sorting is included, it is client-side and does not require backend changes."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement an About Us page describing the NOX_WATCH store/brand, including the owner name (NAEEM) and a premium-brand narrative; keep copy easy to customize (centralized data or clearly editable text sections).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "About Us page describing the store",
+          "Owner Name: NAEEM"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page includes store name (NOX_WATCH) and owner name (NAEEM).",
+        "Page contains at least two sections (e.g., brand story, quality/premium promise) with clean typography and spacing.",
+        "All text is in English and easy to find/edit."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement a Contact page containing (1) store details and (2) a contact form with client-side validation. Store details must include: Owner Name: NAEEM, Mobile: +8801405917740, Location: Brahmanbaria Sodor, Somobei Market, 3rd Floor, Store Name: NOX_WATCH.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Contact page with a contact form and store details",
+          "Owner Name: NAEEM\n- Mobile: +8801405917740\n- Location: Brahmanbaria Sodor, Somobei Market, 3rd Floor, Store Name: NOX_WATCH"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page visibly displays the provided owner name, phone number, and full location text exactly as provided.",
+        "Contact form includes at minimum: name, phone/email, message fields, with clear validation errors.",
+        "On submit, the UI shows a success state (without requiring external email/SMS services).",
+        "All user-facing labels and messages are in English."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add a clear, documented customization structure in the frontend so the user can easily swap images, update text, and change products/collections without touching multiple files (e.g., a single data module + reusable components for sections/cards).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Please generate the website structure so I can easily customize images, text, layout, and design myself."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Products, collections, and store details are defined in one central place (or a small, clearly documented set of files).",
+        "Components read from that data module to render Home/Catalog/About/Contact content.",
+        "There is a short inline comment block or a simple “Customization” section in code explaining what to edit to change products, collections, and store details."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add required generated static images to the project under frontend/public/assets/generated and render them in the Home and Catalog pages as default placeholders that the user can later replace with real product photography.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Homepage showcasing featured watches and top collections",
+          "Product catalog page with images, prices, and descriptions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are stored in frontend/public/assets/generated and referenced directly by the frontend (no backend image routing).",
+        "Home and Catalog render using these placeholder images by default with visually consistent sizing/cropping.",
+        "User can replace images by swapping files or updating image paths in the central data module."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Frontend must be built with React + TypeScript, Tailwind, Shadcn UI components (compose; do not edit read-only UI component sources).",
+    "Do not modify files under frontend/src/components/ui (compose them instead).",
+    "Do not modify immutable hook/bootstrap files (e.g., frontend/src/main.tsx and Internet Identity hooks); build pages/components around them.",
+    "Backend is a single Motoko actor; only add backend work if strictly necessary for the requested UI."
+  ],
+  "nonGoals": [
+    "E-commerce checkout, shopping cart, or payment processing.",
+    "User accounts/authentication requirements beyond any template defaults.",
+    "Real-time chat or messaging.",
+    "Third-party integrations for sending emails/SMS from the contact form.",
+    "Admin dashboard for managing products (products can be edited in a front-end data/config file)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Premium minimalist watch store hero background, white studio aesthetic with subtle blue accents (nox-hero-bg.dim_1920x900.png)",
+      "Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-01.dim_800x800.png)",
+      "Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-02.dim_800x800.png)",
+      "Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-03.dim_800x800.png)",
+      "Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-04.dim_800x800.png)",
+      "Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-05.dim_800x800.png)",
+      "Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-06.dim_800x800.png)",
+      "Minimal NOX_WATCH wordmark logo, clean geometric sans style, white/blue variant on transparent background (nox-watch-logo.dim_512x256.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

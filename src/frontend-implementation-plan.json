@@ -1,0 +1,237 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "NOX_WATCH ultra-modern marketing website (React + TS + Tailwind + shadcn/ui)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a responsive site-wide layout with top navigation, consistent header/footer, and a clean white + blue premium visual system.",
+      "acceptanceCriteria": [
+        "Navigation is visible on all pages and highlights the active route.",
+        "Design is predominantly white with blue accents (links, buttons, section highlights).",
+        "Layout is responsive across mobile/tablet/desktop with sensible spacing and readable typography.",
+        "Footer contains store name (NOX_WATCH) and essential quick links or store details."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app shell and route wiring (Home, Catalog, About, Contact) using React Router and the shared SiteLayout wrapper so navigation/footer appear on all pages; use shadcn/ui primitives (e.g., Button) for consistent navigation/CTAs. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Implement the shared layout: header with responsive top nav (active route styling), main content container, and footer with NOX_WATCH and quick links; compose shadcn/ui components (e.g., Button, Separator) rather than editing any files under frontend/src/components/ui. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/BrandMark.tsx",
+          "operation": "create",
+          "description": "Add a small brand/logo component that renders the NOX_WATCH wordmark using the generated asset at frontend/public/assets/generated/nox-watch-logo.dim_512x256.png, suitable for header/footer usage."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styling entry point to define the white + blue visual system via Tailwind layers/CSS variables (typography, spacing defaults, focus states) while staying compatible with shadcn/ui styling conventions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a Home page with hero, featured watches grid, and premium collections highlights driven by a single editable front-end config/data file.",
+      "acceptanceCriteria": [
+        "Home page contains: (1) hero section, (2) featured watches section, (3) premium collections section.",
+        "Featured watches and collections render from a centralized, clearly labeled data/config module (no hardcoding scattered across components).",
+        "Each featured watch shows at least: image, name, short description, and price (or price placeholder) with a clear CTA (e.g., “View details” linking to Catalog or a product section)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home page with (1) hero section using the generated hero background image, (2) featured watches section rendering product cards from the central content module, and (3) premium collections section; compose shadcn/ui Card and Button for premium styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/marketing/HeroSection.tsx",
+          "operation": "create",
+          "description": "Add a reusable hero section component for the Home page that supports a background image, headline/subheadline, and primary CTA linking to the Catalog route; keep content sourced from the central content module."
+        },
+        {
+          "path": "frontend/src/components/catalog/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable product card (image, name, short description, price, CTA) composed with shadcn/ui Card and Button to ensure consistent premium styling across Home and Catalog. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/marketing/CollectionHighlights.tsx",
+          "operation": "create",
+          "description": "Create a reusable collections highlights component (tiles/cards) that renders from the central content module; compose shadcn/ui Card/Badge as needed for emphasis. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/noxContent.ts",
+          "operation": "create",
+          "description": "Add a centralized, clearly labeled content/config module for: site nav labels, hero copy, featured products, premium collections, and shared store details; include image paths that can be swapped by editing this single file."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement a Product Catalog page with a responsive grid of product cards driven by centralized data, with optional client-side filtering/sorting.",
+      "acceptanceCriteria": [
+        "Catalog page displays multiple products in a responsive grid with consistent card styling.",
+        "Each product card shows: image, product name, price, and short description.",
+        "Product list is driven by a centralized data/config module so the user can add/remove/edit products easily.",
+        "If filtering/sorting is included, it is client-side and does not require backend changes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CatalogPage.tsx",
+          "operation": "create",
+          "description": "Create the Catalog page that renders products from the central content module in a responsive grid using the shared ProductCard; add optional client-side filter/sort UI that can be removed easily; compose shadcn/ui Input/Select/Button where applicable. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/catalog/CatalogToolbar.tsx",
+          "operation": "create",
+          "description": "Add an optional client-side browsing toolbar (e.g., search text + sort selector) that operates only on in-memory product data from the central content module; compose shadcn/ui Input and Select. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement an About Us page with NOX_WATCH + owner name (NAEEM) and a premium brand narrative with editable copy.",
+      "acceptanceCriteria": [
+        "About page includes store name (NOX_WATCH) and owner name (NAEEM).",
+        "Page contains at least two sections (e.g., brand story, quality/premium promise) with clean typography and spacing.",
+        "All text is in English and easy to find/edit."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create an About page with at least two clearly separated sections (brand story + premium promise/quality) and ensure store/owner names render from the central content module; use Tailwind typography utilities and shadcn/ui components (e.g., Card/Separator) as needed. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/noxContent.ts",
+          "operation": "modify",
+          "description": "Add/edit About page copy blocks (English) in the centralized content module so the narrative is easy to customize without touching multiple files."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement a Contact page with store details and a validated contact form with a local success state.",
+      "acceptanceCriteria": [
+        "Contact page visibly displays the provided owner name, phone number, and full location text exactly as provided.",
+        "Contact form includes at minimum: name, phone/email, message fields, with clear validation errors.",
+        "On submit, the UI shows a success state (without requiring external email/SMS services).",
+        "All user-facing labels and messages are in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact page that displays store details sourced from the central content module (including exact provided strings) and renders a contact form with client-side validation and an in-UI success state (no external services); compose shadcn/ui Form building blocks (Input, Textarea, Button) and optionally Alert for success feedback. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/contact/ContactForm.tsx",
+          "operation": "create",
+          "description": "Implement the reusable contact form component with client-side validation (required fields, basic phone/email format checks) and submit success state; compose shadcn/ui Input/Textarea/Button and any shadcn/ui form helpers available in the template. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/noxContent.ts",
+          "operation": "modify",
+          "description": "Add/store the Contact page store details in the centralized module, including: Owner Name: NAEEM, Mobile: +8801405917740, Location: Brahmanbaria Sodor, Somobei Market, 3rd Floor, Store Name: NOX_WATCH."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Provide a documented customization structure (central data module + reusable components) so users can swap images/text/products without touching multiple files.",
+      "acceptanceCriteria": [
+        "Products, collections, and store details are defined in one central place (or a small, clearly documented set of files).",
+        "Components read from that data module to render Home/Catalog/About/Contact content.",
+        "There is a short inline comment block or a simple “Customization” section in code explaining what to edit to change products, collections, and store details."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/noxContent.ts",
+          "operation": "modify",
+          "description": "Add an inline 'Customization' comment block describing exactly what arrays/fields to edit for products, collections, hero content, and store details, including how to swap placeholder image paths."
+        },
+        {
+          "path": "frontend/src/components/catalog/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Ensure ProductCard consumes only the product model from the centralized content module (no hardcoded labels/content), keeping it reusable across Home/Catalog."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure Home page sections read all copy/image references from the centralized content module and avoid scattered hardcoding across components."
+        },
+        {
+          "path": "frontend/src/pages/CatalogPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Catalog page product list and optional filter/sort behavior operates on centralized product data and remains easy to remove/customize."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add required generated static images under frontend/public/assets/generated and render them in Home and Catalog as default placeholders.",
+      "acceptanceCriteria": [
+        "Generated images are stored in frontend/public/assets/generated and referenced directly by the frontend (no backend image routing).",
+        "Home and Catalog render using these placeholder images by default with visually consistent sizing/cropping.",
+        "User can replace images by swapping files or updating image paths in the central data module."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/nox-hero-bg.dim_1920x900.png",
+          "operation": "create",
+          "description": "Add the generated hero background image asset to be used as the default Home hero background."
+        },
+        {
+          "path": "frontend/public/assets/generated/watch-01.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated placeholder watch image asset for product cards."
+        },
+        {
+          "path": "frontend/public/assets/generated/watch-02.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated placeholder watch image asset for product cards."
+        },
+        {
+          "path": "frontend/public/assets/generated/watch-03.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated placeholder watch image asset for product cards."
+        },
+        {
+          "path": "frontend/public/assets/generated/watch-04.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated placeholder watch image asset for product cards."
+        },
+        {
+          "path": "frontend/public/assets/generated/watch-05.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated placeholder watch image asset for product cards."
+        },
+        {
+          "path": "frontend/public/assets/generated/watch-06.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated placeholder watch image asset for product cards."
+        },
+        {
+          "path": "frontend/public/assets/generated/nox-watch-logo.dim_512x256.png",
+          "operation": "create",
+          "description": "Add the generated NOX_WATCH wordmark logo asset for header/footer branding."
+        },
+        {
+          "path": "frontend/src/content/noxContent.ts",
+          "operation": "modify",
+          "description": "Reference the generated assets by default in the centralized content module using these exact paths: frontend/public/assets/generated/nox-hero-bg.dim_1920x900.png, frontend/public/assets/generated/watch-01.dim_800x800.png, frontend/public/assets/generated/watch-02.dim_800x800.png, frontend/public/assets/generated/watch-03.dim_800x800.png, frontend/public/assets/generated/watch-04.dim_800x800.png, frontend/public/assets/generated/watch-05.dim_800x800.png, frontend/public/assets/generated/watch-06.dim_800x800.png, frontend/public/assets/generated/nox-watch-logo.dim_512x256.png."
+        },
+        {
+          "path": "frontend/src/components/catalog/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Ensure product images render with consistent sizing/cropping (e.g., fixed aspect ratio, object-fit) so placeholders look uniform across Home and Catalog."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a professional, ultra-modern marketing website for the NOX_WATCH watch store, using a clean white/blue theme, with easy navigation and core pages: Home (featured watches/collections), Product Catalog (images/prices/descriptions), About Us, and Contact (contact form + store details).",
+  "architectural_notes": [
+    "Use a clean, ultra-modern aesthetic with a white + blue palette.",
+    "Provide a modular, easily editable structure so the owner can customize content without code-heavy changes.",
+    "Include reusable components for product cards and collections/featured sections."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Premium minimalist watch store hero background, white studio aesthetic with subtle blue accents (nox-hero-bg.dim_1920x900.png)\n- Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-01.dim_800x800.png)\n- Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-02.dim_800x800.png)\n- Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-03.dim_800x800.png)\n- Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-04.dim_800x800.png)\n- Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-05.dim_800x800.png)\n- Ultra-modern watch product image on white background, metallic detail, soft shadow (watch-06.dim_800x800.png)\n- Minimal NOX_WATCH wordmark logo, clean geometric sans style, white/blue variant on transparent background (nox-watch-logo.dim_512x256.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-site-wide-layout-for-nox-watch-with-a-responsive-top-navigation-home-catalog-about-contact-a-consistent-header-footer-and-a-clean-white-blue-visual-system-typography-spacing-buttons-cards-suitable-for-a-premium-watch-brand",
+      "title": "Create a site-wide layout for NOX_WATCH with a responsive top navigation (Home, Catalog, About, Contact), a consistent header/footer, and a clean white + blue visual system (typography, spacing, buttons, cards) suitable for a premium watch brand.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-home-page-that-showcases-featured-watches-and-highlights-top-premium-collections-with-a-modern-hero-section-featured-grid-and-collection-highlights-keep-all-content-easy-to-customize-via-a-single-front-end-config-data-file-e-g-arrays-for-featured-products-and-collections",
+      "title": "Implement a Home page that showcases featured watches and highlights top/premium collections with a modern hero section, featured grid, and collection highlights; keep all content easy to customize via a single front-end config/data file (e.g., arrays for featured products and collections).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-product-catalog-page-that-displays-a-grid-list-of-watch-product-cards-including-image-price-and-description-with-basic-ux-for-browsing-responsive-grid-and-optional-simple-client-side-filtering-sorting-that-is-easy-to-remove-customize",
+      "title": "Implement a Product Catalog page that displays a grid/list of watch product cards including image, price, and description, with basic UX for browsing (responsive grid and optional simple client-side filtering/sorting that is easy to remove/customize).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-about-us-page-describing-the-nox-watch-store-brand-including-the-owner-name-naeem-and-a-premium-brand-narrative-keep-copy-easy-to-customize-centralized-data-or-clearly-editable-text-sections",
+      "title": "Implement an About Us page describing the NOX_WATCH store/brand, including the owner name (NAEEM) and a premium-brand narrative; keep copy easy to customize (centralized data or clearly editable text sections).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-page-containing-1-store-details-and-2-a-contact-form-with-client-side-validation-store-details-must-include-owner-name-naeem-mobile-8801405917740-location-brahmanbaria-sodor-somobei-market-3rd-floor-store-name-nox-watch",
+      "title": "Implement a Contact page containing (1) store details and (2) a contact form with client-side validation. Store details must include: Owner Name: NAEEM, Mobile: +8801405917740, Location: Brahmanbaria Sodor, Somobei Market, 3rd Floor, Store Name: NOX_WATCH.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clear-documented-customization-structure-in-the-frontend-so-the-user-can-easily-swap-images-update-text-and-change-products-collections-without-touching-multiple-files-e-g-a-single-data-module-reusable-components-for-sections-cards",
+      "title": "Add a clear, documented customization structure in the frontend so the user can easily swap images, update text, and change products/collections without touching multiple files (e.g., a single data module + reusable components for sections/cards).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-generated-static-images-to-the-project-under-frontend-public-assets-generated-and-render-them-in-the-home-and-catalog-pages-as-default-placeholders-that-the-user-can-later-replace-with-real-product-photography",
+      "title": "Add required generated static images to the project under frontend/public/assets/generated and render them in the Home and Catalog pages as default placeholders that the user can later replace with real product photography.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create overall website structure/layout that is easy to customize (images, text, layout, design)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement clean, modern UI styling with a white and blue color scheme",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add site-wide navigation and user-friendly page layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Build Homepage showcasing featured watches and top/premium collections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Build Product Catalog page with product cards (image, price, description)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Build About Us page describing the store/brand",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Build Contact page with contact form and store details (owner, phone, location)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "NOX_WATCH",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

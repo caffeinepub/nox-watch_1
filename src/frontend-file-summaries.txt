@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up React Router with routes for Home, Catalog, About, and Contact pages, all wrapped in the SiteLayout component for consistent navigation and footer.",
+  "frontend/src/components/layout/SiteLayout.tsx": "Site-wide layout component providing responsive header with navigation, mobile menu, main content area with Outlet for page rendering, and comprehensive footer with store details and social links.",
+  "frontend/src/components/layout/BrandMark.tsx": "Simple brand logo component that displays the NOX_WATCH logo image from the centralized content configuration.",
+  "frontend/src/pages/HomePage.tsx": "Homepage component featuring hero section, featured watches grid with product cards, and premium collections highlights section with call-to-action buttons.",
+  "frontend/src/components/marketing/HeroSection.tsx": "Hero section component with background image overlay, headline, subheadline, and dual call-to-action buttons for catalog and about pages.",
+  "frontend/src/components/catalog/ProductCard.tsx": "Reusable product card component displaying watch image, name, description, price, optional badge, and view details button with hover effects.",
+  "frontend/src/components/marketing/CollectionHighlights.tsx": "Collections showcase component rendering premium collection cards with images, names, descriptions, and piece counts from centralized content.",
+  "frontend/src/pages/CatalogPage.tsx": "Product catalog page with search and sort functionality, displaying all watches in a responsive grid with client-side filtering and sorting capabilities.",
+  "frontend/src/components/catalog/CatalogToolbar.tsx": "Catalog browsing toolbar providing search input and sort dropdown for filtering and organizing product listings.",
+  "frontend/src/pages/AboutPage.tsx": "About page featuring brand story, premium promise sections, why-choose-us feature grid, and owner information with clean typography and spacing.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page displaying store information cards (name, contact details, location) alongside a validated contact form with business hours.",
+  "frontend/src/components/contact/ContactForm.tsx": "Contact form component with client-side validation for name, email/phone, and message fields, displaying success state after submission without external services.",
+  "frontend/src/content/noxContent.ts": "Centralized content configuration file containing all customizable site content including products, collections, hero content, store details, and about page copy with detailed customization instructions.",
+  "frontend/src/index.css": "Global styles defining white and blue OKLCH color system for light and dark modes, custom scrollbar styles, and base typography settings for the NOX_WATCH brand.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the default theme with custom color tokens, Inter font family, and maintaining all shadcn/ui component styling requirements.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as the static marketing website requires no backend data operations, with all content managed through the centralized content configuration."
+}

@@ -1,0 +1,146 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-site-wide-layout-for-nox-watch-with-a-responsive-top-navigation-home-catalog-about-contact-a-consistent-header-footer-and-a-clean-white-blue-visual-system-typography-spacing-buttons-cards-suitable-for-a-premium-watch-brand",
+      "featureTitle": "Create a site-wide layout for NOX_WATCH with a responsive top navigation (Home, Catalog, About, Contact), a consistent header/footer, and a clean white + blue visual system (typography, spacing, buttons, cards) suitable for a premium watch brand.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/BrandMark.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-home-page-that-showcases-featured-watches-and-highlights-top-premium-collections-with-a-modern-hero-section-featured-grid-and-collection-highlights-keep-all-content-easy-to-customize-via-a-single-front-end-config-data-file-e-g-arrays-for-featured-products-and-collections",
+      "featureTitle": "Implement a Home page that showcases featured watches and highlights top/premium collections with a modern hero section, featured grid, and collection highlights; keep all content easy to customize via a single front-end config/data file (e.g., arrays for featured products and collections).",
+      "files": [
+        "frontend/src/components/catalog/ProductCard.tsx",
+        "frontend/src/components/marketing/CollectionHighlights.tsx",
+        "frontend/src/components/marketing/HeroSection.tsx",
+        "frontend/src/content/noxContent.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-product-catalog-page-that-displays-a-grid-list-of-watch-product-cards-including-image-price-and-description-with-basic-ux-for-browsing-responsive-grid-and-optional-simple-client-side-filtering-sorting-that-is-easy-to-remove-customize",
+      "featureTitle": "Implement a Product Catalog page that displays a grid/list of watch product cards including image, price, and description, with basic UX for browsing (responsive grid and optional simple client-side filtering/sorting that is easy to remove/customize).",
+      "files": [
+        "frontend/src/components/catalog/CatalogToolbar.tsx",
+        "frontend/src/pages/CatalogPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-about-us-page-describing-the-nox-watch-store-brand-including-the-owner-name-naeem-and-a-premium-brand-narrative-keep-copy-easy-to-customize-centralized-data-or-clearly-editable-text-sections",
+      "featureTitle": "Implement an About Us page describing the NOX_WATCH store/brand, including the owner name (NAEEM) and a premium-brand narrative; keep copy easy to customize (centralized data or clearly editable text sections).",
+      "files": [
+        "frontend/src/content/noxContent.ts",
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-contact-page-containing-1-store-details-and-2-a-contact-form-with-client-side-validation-store-details-must-include-owner-name-naeem-mobile-8801405917740-location-brahmanbaria-sodor-somobei-market-3rd-floor-store-name-nox-watch",
+      "featureTitle": "Implement a Contact page containing (1) store details and (2) a contact form with client-side validation. Store details must include: Owner Name: NAEEM, Mobile: +8801405917740, Location: Brahmanbaria Sodor, Somobei Market, 3rd Floor, Store Name: NOX_WATCH.",
+      "files": [
+        "frontend/src/components/contact/ContactForm.tsx",
+        "frontend/src/content/noxContent.ts",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-clear-documented-customization-structure-in-the-frontend-so-the-user-can-easily-swap-images-update-text-and-change-products-collections-without-touching-multiple-files-e-g-a-single-data-module-reusable-components-for-sections-cards",
+      "featureTitle": "Add a clear, documented customization structure in the frontend so the user can easily swap images, update text, and change products/collections without touching multiple files (e.g., a single data module + reusable components for sections/cards).",
+      "files": [
+        "frontend/src/components/catalog/ProductCard.tsx",
+        "frontend/src/content/noxContent.ts",
+        "frontend/src/pages/CatalogPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-required-generated-static-images-to-the-project-under-frontend-public-assets-generated-and-render-them-in-the-home-and-catalog-pages-as-default-placeholders-that-the-user-can-later-replace-with-real-product-photography",
+      "featureTitle": "Add required generated static images to the project under frontend/public/assets/generated and render them in the Home and Catalog pages as default placeholders that the user can later replace with real product photography.",
+      "files": [
+        "frontend/src/components/catalog/ProductCard.tsx",
+        "frontend/src/content/noxContent.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

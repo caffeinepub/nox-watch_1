@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* White and Blue Color System for NOX_WATCH */
+        --background: 1 0 0;                    /* Pure white */
+        --foreground: 0.2 0 0;                  /* Near black for text */
+        
+        --card: 1 0 0;                          /* White cards */
+        --card-foreground: 0.2 0 0;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.2 0 0;
+        
+        /* Primary: Rich Blue */
+        --primary: 0.45 0.18 250;               /* Rich blue - main brand color */
+        --primary-foreground: 1 0 0;            /* White text on blue */
+        
+        /* Secondary: Light blue-gray */
+        --secondary: 0.96 0.01 250;             /* Very light blue */
+        --secondary-foreground: 0.3 0.05 250;   /* Dark blue text */
+        
+        /* Muted: Soft gray with blue tint */
+        --muted: 0.97 0.005 250;                /* Soft blue-gray */
+        --muted-foreground: 0.5 0.02 250;       /* Medium blue-gray */
+        
+        /* Accent: Bright blue */
+        --accent: 0.55 0.20 250;                /* Bright blue accent */
+        --accent-foreground: 1 0 0;
+        
+        --destructive: 0.577 0.245 27.325;      /* Red for errors */
+        --destructive-foreground: 1 0 0;
+        
+        --border: 0.92 0.01 250;                /* Light blue-gray border */
+        --input: 0.92 0.01 250;
+        --ring: 0.45 0.18 250;                  /* Blue focus ring */
+        
+        --chart-1: 0.55 0.20 250;
+        --chart-2: 0.45 0.18 250;
+        --chart-3: 0.65 0.15 250;
+        --chart-4: 0.50 0.22 250;
+        --chart-5: 0.60 0.18 250;
+    }
+
+    .dark {
+        --background: 0.15 0.01 250;            /* Dark blue-black */
+        --foreground: 0.98 0 0;                 /* Near white */
+        
+        --card: 0.20 0.02 250;                  /* Dark blue card */
+        --card-foreground: 0.98 0 0;
+        
+        --popover: 0.18 0.02 250;
+        --popover-foreground: 0.98 0 0;
+        
+        --primary: 0.65 0.20 250;               /* Lighter blue for dark mode */
+        --primary-foreground: 0.15 0.01 250;    /* Dark text on light blue */
+        
+        --secondary: 0.25 0.03 250;             /* Dark blue-gray */
+        --secondary-foreground: 0.98 0 0;
+        
+        --muted: 0.25 0.03 250;
+        --muted-foreground: 0.65 0.05 250;
+        
+        --accent: 0.55 0.20 250;
+        --accent-foreground: 0.98 0 0;
+        
+        --destructive: 0.65 0.22 27.325;
+        --destructive-foreground: 0.98 0 0;
+        
+        --border: 0.30 0.03 250;
+        --input: 0.30 0.03 250;
+        --ring: 0.65 0.20 250;
+        
+        --chart-1: 0.65 0.20 250;
+        --chart-2: 0.55 0.22 250;
+        --chart-3: 0.75 0.18 250;
+        --chart-4: 0.60 0.24 250;
+        --chart-5: 0.70 0.20 250;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Focus visible styles */
+    *:focus-visible {
+        @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    }
+}
+
+@layer components {
+    /* Custom scrollbar for webkit browsers */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-track {
+        @apply bg-muted/30;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-muted-foreground/30 rounded-full;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply bg-muted-foreground/50;
+    }
+}
